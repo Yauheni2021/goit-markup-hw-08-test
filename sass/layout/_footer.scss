@@ -1,0 +1,43 @@
+.footer-section {
+  padding: 60px 0;
+  background-color: $secondary-bg-color;
+}
+
+.container.footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-container {
+  margin-right: 70px;
+}
+
+.footer-section__list {
+  @extend %list;
+}
+
+.footer-section__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-section__link {
+  @extend %link;
+  font-style: normal;
+  line-height: 1.71em;
+  color: $footer-link-color;
+  transition: color $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus,
+  &--current:hover,
+  &--current:focus {
+      color: $accent-color;
+  }
+}
+
+.footer-section__link--current {
+  line-height: 1.71em;
+  color: $primary-bg-color;
+  transition: color $transition-duration $transition-timing-function;
+}
+

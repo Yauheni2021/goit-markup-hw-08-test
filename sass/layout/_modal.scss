@@ -1,0 +1,59 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  opacity: 1;
+  background-color: $backdrop-background-color;
+  transition: opacity $transition-duration $transition-timing-function,
+  visibility $transition-duration;
+  &--is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  min-height: 581px;
+  background-color: $primary-bg-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+  transform: translate(-50%, -50%) rotate(0) scale(1);
+  transition: $transition-duration;
+  .modal-backdrop > & {
+      transform: scale(1.0) translate(-50%, -50%);
+  }
+}
+
+.modal-btn__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: fill $transition-duration $transition-timing-function,
+    transform $transition-duration ease-in-out,
+    border-color $transition-duration $transition-timing-function;
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+        transform: rotate(90deg);
+    }
+
+}

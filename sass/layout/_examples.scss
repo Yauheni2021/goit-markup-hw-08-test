@@ -1,0 +1,38 @@
+.examples-section__list {
+  @extend %list;
+  display: flex;
+  align-items: center;
+  margin: -15px;
+}
+
+.examples-section__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: calc((100% - 6 * $card-set-gap) / 6);
+  margin: 15px;
+  color: $accent-color;
+}
+
+
+.examples-section__link {
+  @extend %link;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid $social-link-color;
+  border-radius: 4px;
+  fill: $social-link-color;
+  transition: fill $transition-duration $transition-timing-function,
+  border-color $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+

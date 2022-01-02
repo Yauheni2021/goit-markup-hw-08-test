@@ -1,0 +1,42 @@
+.contact-list {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+
+.contact-list__item {
+  display: flex;
+  text-align: center;
+  
+}
+
+.contact-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+
+.contact-list__link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  line-height: 1.14em;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+  transition: color $transition-duration $transition-timing-function;
+}
+
+.contact-list__icon {
+  fill: $primary-text-color;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+
+
+
+.link.current:hover::after,
+.link.current:focus::after {
+  opacity: 1;
+}
