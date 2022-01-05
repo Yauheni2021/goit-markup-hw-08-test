@@ -103,7 +103,6 @@ input:-webkit-autofill:active {
    }
 }
 
-
 .feedback-label--textarea {
   margin-bottom: 20px;
 }
@@ -135,8 +134,6 @@ input:-webkit-autofill:active {
   border-color: $accent-color;
 }
 
-
-
 .feedback-checkbox__icon--check {
   margin-right: 7px;
   width: 16px;
@@ -166,8 +163,6 @@ input:-webkit-autofill:active {
   outline: 1px solid $accent-color;
 }
 
-
-
 .feedback-checkbox__contract {
   font-weight: 400;
   font-size: 14px;
@@ -176,15 +171,6 @@ input:-webkit-autofill:active {
   text-decoration-skip-ink: none;
   color: $accent-color;
 }
-
-.feedback-submit__btn {
-  font-family: inherit;
-  height: 50px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-
 
 .feedback-checkbox__text {
   font-weight: 400;

@@ -20,7 +20,7 @@
   $transition-timing-function;
 }
 
-.cards-section__link:hover .cards-overlay__text,
-.cards-section__link:focus .cards-overlay__text {
+.cards__link:hover .cards-overlay__text,
+.cards__link:focus .cards-overlay__text {
   transform: translateY(0);
 }

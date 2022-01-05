@@ -1,58 +1,33 @@
-.footer-social__thumb {
+.social__thumb {
   display: block;
   margin-right: auto;
   width: 206px;
   height: 80px;
-
 }
 
-.team-social__list {
+.social__list {
   @extend %list;
   display: flex;
-  justify-content: center;
-
 }
 
-.team-social__item:not(:last-child),
-.footer-socials__item:not(:last-child) {
+.social__item:not(:last-child) {
   margin-right: 10px;
 } 
 
-.team-social__link {
-  @extend %link;
-  fill: $primary-bg-color;
-  color: $social-link-color;
-  transition: background-color $transition-duration $transition-timing-function,
-  fill $transition-duration $transition-timing-function;
 
-  &:hover,
-  &:focus {
-  background-color: $accent-color;
-  color: $primary-bg-color;
-  transition: color ;
-  }
-}
-
-.team-social__icon {
+.social__icon {
   fill: $primary-bg-color;
   fill: currentColor;
 }
 
-
-.footer-social__text,
-.footer-form__text {
+.social__text,
+.form__text {
   display: block;
   font-size: 14px;
   line-height: 1.14;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-
-.footer-social__list {
-  @extend %list;
-  display: flex;
-}
-
 
 .socials__link {
   @extend %link;
@@ -73,5 +48,17 @@
   &:focus {
     background-color: $accent-color;
   }
-}
+  &--team {
+  fill: $primary-bg-color;
+  color: $social-link-color;
+  transition: background-color $transition-duration $transition-timing-function,
+  fill $transition-duration $transition-timing-function;
 
+  &:hover,
+  &:focus {
+  background-color: $accent-color;
+  color: $primary-bg-color;
+  transition: color ;
+    }
+  }
+}

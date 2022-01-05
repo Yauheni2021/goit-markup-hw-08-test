@@ -1,11 +1,11 @@
-.cards-section__list {
+.cards__list {
   @extend %list;
   display: flex;
   flex-wrap: wrap;
   background-color: $primary-bg-color;
 }
 
-.cards-section__item {
+.cards__item {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
@@ -19,7 +19,7 @@
   }
 }
 
-.cards-section__link {
+.cards__link {
   @extend %link;  
   display: block;
   transition: box-shadow $transition-duration
@@ -34,7 +34,7 @@
   }
 }
 
-.cards-section__title {
+.cards__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2em;
@@ -43,7 +43,7 @@
   color: $title-text-color;
 }
 
-.cards-section__text {
+.cards__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;

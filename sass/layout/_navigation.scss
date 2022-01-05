@@ -3,7 +3,7 @@
   text-align: center;
 }
 
-.navigation-section__list {
+.navigation__list {
   @extend %list;
   display: flex;
   align-items: center;
@@ -12,11 +12,11 @@
   margin-left: auto;
 }
 
-.navigation-section__item:not(:last-child) {
+.navigation__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.navigation-section__link,
+.navigation__link,
 .contact-list__link {
   @extend %link;
   display: inline-block;
@@ -24,7 +24,7 @@
   padding-top: 32px;
 }
 
-.navigation-section__link::after {
+.navigation__link::after {
   content: "";
   display: flex;
   position: absolute;
@@ -41,7 +41,7 @@
       
 }
 
-.navigation-section__link {
+.navigation__link {
   display: block;
   position: relative;
   color: $title-text-color;

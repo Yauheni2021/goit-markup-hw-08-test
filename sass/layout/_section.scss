@@ -1,4 +1,11 @@
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+  &--team {
+    background-color: $bg-team-color;
+  }
+  &--projects {
+  padding-top: 0px;
+  }
 }
+
