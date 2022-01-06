@@ -11,17 +11,27 @@
 }
 
 .feature-section__list {
- @extend %list;
-  display: flex;
-  margin: -15px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
+
 
 
 .feature-section__item {
-  flex-basis: calc((100% -4 * $card-set-gap) / 4);
-  margin: 15px;
-}
+  // flex-basis: calc((100% -4 * $card-set-gap) / 4);
+  // margin: 15px;
 
+  @media screen and (max-width: 767px) {
+    text-align: left;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+}
+}
 
 .feature-section__title {
   font-weight: 700;

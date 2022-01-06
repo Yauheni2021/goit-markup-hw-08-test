@@ -17,7 +17,7 @@ ul {
   text-decoration: none;
 }
 
-.social__list, .projects-section__list, .filter-btn__list, .cards__list, .footer__list, .examples-section__list, .team-section__list, .feature-section__list, .navigation__list {
+.social__list, .projects-section__list, .filter-btn__list, .cards__list, .footer__list, .examples-section__list, .team-section__list, .navigation__list {
   list-style: none;
 }
 
@@ -137,6 +137,10 @@ body {
   color: #2196f3;
 }
 
+.contacts__thumb {
+  display: flex;
+}
+
 .hero-section {
   background-color: #2f303a;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img17.jpg);
@@ -228,14 +232,21 @@ body {
   margin-bottom: 30px;
 }
 
-.feature-section__list {
-  display: flex;
-  margin: -15px;
+@media screen and (min-width: 768px) {
+  .feature-section__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
-.feature-section__item {
-  flex-basis: calc((100% -4 * $card-set-gap) / 4);
-  margin: 15px;
+@media screen and (max-width: 767px) {
+  .feature-section__item {
+    text-align: left;
+  }
+  .feature-section__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .feature-section__title {
