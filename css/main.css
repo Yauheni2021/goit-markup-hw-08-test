@@ -60,6 +60,11 @@ body {
 .section--projects {
   padding-top: 0px;
 }
+@media screen and (max-width: 1199px) {
+  .section--projects {
+    display: none;
+  }
+}
 
 .page-header {
   position: fixed;
@@ -142,7 +147,6 @@ body {
 }
 
 .hero-section {
-  display: flex;
   align-items: center;
   text-align: center;
   max-width: 480px;
@@ -1011,8 +1015,29 @@ input:-webkit-autofill:active {
   align-items: baseline;
 }
 .container--hero {
-  display: flex;
-  max-width: 696px;
+  max-width: 360px;
+  padding: 0;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .container--hero {
+    max-width: 696px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .container--hero {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container--hero {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container--hero {
+    width: 1200px;
+  }
 }
 .container--header {
   display: flex;

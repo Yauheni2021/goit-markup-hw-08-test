@@ -11,8 +11,24 @@
   align-items: baseline;
   }
   &--hero {
-  display: flex;
-  max-width: 696px;
+  // display: flex;
+  // max-width: 696px;
+  max-width: 360px;
+  padding: 0;
+    text-align: center;
+    @media screen and (min-width: $desktop) {
+      max-width: 696px;
+    }
+    @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
   }
   &--header {
   display: flex;
