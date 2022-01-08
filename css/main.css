@@ -608,6 +608,12 @@ body {
   margin-bottom: 50px;
   color: #212121;
 }
+@media screen and (max-width: 1199px) {
+  .projects-section__title,
+.page-title {
+    margin-bottom: 30px;
+  }
+}
 
 .projects-section__list {
   display: flex;
