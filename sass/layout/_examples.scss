@@ -1,27 +1,45 @@
-.examples-section__list {
+.examples__list {
   @extend %list;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  // align-items: center;
   margin: -15px;
 }
 
-.examples-section__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-basis: calc((100% - 6 * $card-set-gap) / 6);
+.examples__item {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-basis: calc((100% - 6 * $card-set-gap) / 6);
+  // margin: 15px;
+  // color: $accent-color;
+  @media screen and (max-width: 679px) {
+  width: calc(100% / 2 - $card-set-gap);
   margin: 15px;
-  color: $accent-color;
+
+  @media screen and (min-width: $tablet) {
+    width: calc(100% / 3 - $card-set-gap);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc(100% / 6 - $card-set-gap);
+  }
+}
 }
 
-
-.examples-section__link {
+.examples__link {
   @extend %link;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  flex-basis: 210px;
   height: 92px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-basis: 210px;
+  // width: 170px;
+  // height: 92px;
   border: 1px solid $social-link-color;
   border-radius: 4px;
   fill: $social-link-color;

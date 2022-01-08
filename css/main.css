@@ -12,12 +12,12 @@ ul {
   list-style: none;
 }
 
-.socials__link, .logo--footer, .logo, .cards__link, .footer__link, .examples-section__link, .links, .navigation__link,
+.socials__link, .logo--footer, .logo, .cards__link, .footer__link, .examples__link, .links, .navigation__link,
 .contact-list__link {
   text-decoration: none;
 }
 
-.social__list, .projects-section__list, .filter-btn__list, .cards__list, .footer__list, .examples-section__list, .team__list, .navigation__list {
+.social__list, .projects-section__list, .filter-btn__list, .cards__list, .footer__list, .examples__list, .team__list, .navigation__list {
   list-style: none;
 }
 
@@ -341,33 +341,41 @@ body {
   color: #757575;
 }
 
-.examples-section__list {
+.examples__list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   margin: -15px;
 }
 
-.examples-section__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-basis: calc((100% - 6 * $card-set-gap) / 6);
-  margin: 15px;
-  color: #2196f3;
+@media screen and (max-width: 679px) {
+  .examples__item {
+    width: calc(100% / 2 - $card-set-gap);
+    margin: 15px;
+  }
+}
+@media screen and (max-width: 679px) and (min-width: 768px) {
+  .examples__item {
+    width: calc(100% / 3 - $card-set-gap);
+  }
+}
+@media screen and (max-width: 679px) and (min-width: 1200px) {
+  .examples__item {
+    width: calc(100% / 6 - $card-set-gap);
+  }
 }
 
-.examples-section__link {
+.examples__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  flex-basis: 210px;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   fill: #AFB1B8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.examples-section__link:hover, .examples-section__link:focus {
+.examples__link:hover, .examples__link:focus {
   fill: #2196f3;
   border-color: #2196f3;
 }
