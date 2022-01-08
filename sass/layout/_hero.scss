@@ -1,32 +1,87 @@
 .hero-section {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 480px;
+  min-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and(min-width: $desktop) {
+    min-height: 600px;
+  }
+
+  // padding-bottom: 200px;
+  // padding-top: 200px;
+
   background-color: $secondary-bg-color;
+
+
   background-image: linear-gradient(
     to right,
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4) 
     ), 
-  url(../images/Img17.jpg);
+  url(../images/hero-mobile-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-bottom: 200px;
-  padding-top: 200px;
+
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: url(../images/hero-mobile-img@2x.jpg);
+  }
+   @media screen and (min-width: 481px) {
+    max-width: 768px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero-tablet-img.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero-tablet-img@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    max-width: 1600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/hero-desktop-img.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero-desktop-img@2x.jpg');
+    }
+  }
 }
 
-.hero-section__title {
+
+.hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36em;
+  font-size: 26px;
+  line-height: 1.62em;
   letter-spacing: 0.06em;
+
+  margin-top: 0;
+  padding: 0;
   text-transform: uppercase;
   margin-bottom: $card-set-gap;
   color: $primary-bg-color;
-;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 
