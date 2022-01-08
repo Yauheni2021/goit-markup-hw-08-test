@@ -3,14 +3,14 @@
   flex-direction: column;
 }
 
-.feedback-text {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  margin-bottom: 12px;
-  color: $title-text-color;
-}
+// .feedback-text {
+//   font-weight: 700;
+//   font-size: 20px;
+//   line-height: 1.15;
+//   text-align: center;
+//   margin-bottom: 12px;
+//   color: $title-text-color;
+// }
 
 /* -------------Бэкграунд инпут------------------- */
 input:-webkit-autofill,
@@ -25,6 +25,7 @@ input:-webkit-autofill:active {
   position: relative;
   display: block;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .feedback-label__text {
@@ -154,7 +155,7 @@ input:-webkit-autofill:active {
   width: 16px;
   height: 15px;
   border: 2px solid transparent;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: $accent-color;
   border: none;
 }
@@ -165,8 +166,9 @@ input:-webkit-autofill:active {
 
 .feedback-checkbox__contract {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
   text-decoration-line: underline;
   text-decoration-skip-ink: none;
   color: $accent-color;
@@ -174,10 +176,14 @@ input:-webkit-autofill:active {
 
 .feedback-checkbox__text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: $primary-text-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
 }
 
 

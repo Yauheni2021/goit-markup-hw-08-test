@@ -20,14 +20,27 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  min-height: 581px;
+  text-align: center;
+
+  width: 90%;
+  height: auto;
+  // min-height: 581px;
   background-color: $primary-bg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
-  transform: translate(-50%, -50%) rotate(0) scale(1);
+  transform: translate(-50%, -50%) scale(1);
   transition: $transition-duration;
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
+  }
   .modal-backdrop > & {
       transform: scale(1.0) translate(-50%, -50%);
   }
@@ -56,4 +69,14 @@
         transform: rotate(90deg);
     }
 
+}
+
+.modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: $title-text-color;
 }
